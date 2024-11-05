@@ -35,8 +35,10 @@ const Quest = () => {
           const accounts = await provider.send("wallet_requestPermissions", [
               { eth_accounts: {} }
           ]);
+          
           console.log(accounts); 
           connectWallet();
+
       } catch (error) {
           console.error("Error switching wallet:", error);
           setStatus("An error occurred. Please try again.");
